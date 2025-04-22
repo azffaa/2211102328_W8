@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>W8_2211102328</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: #111;
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      padding-top: 50px;
+    }
+    .paragraf {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1s ease-in-out;
+    }
+    .paragraf.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .fade-in {
+      animation: fadeIn 2s ease forwards;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container text-center">
+  <h1 class="mb-3 fw-bold">AZFA FAIRUZIA HARTOYO</h1>
+  <h4 class="mb-4">2211102328</h4>
+  <h2 class="mb-5 fade-in">The Black Cat</h2>
+  <h2 class="mb-5 fade-in">by Edgar Allan Poe (published 1845)</h2>
+
+  <p class="paragraf">Pluto -- this was the cat's name -- was my favorite pet and playmate. I alone fed him, and he attended me wherever I went about the house. It was even with difficulty that I could prevent him from following me through the streets.</p>
+  <p class="paragraf">Our friendship lasted, in this manner, for several years, during which my general temperament and character -- through the instrumentality of the Fiend Intemperance -- had (I blush to confess it) experienced a radical alteration for the worse. I grew, day by day, more moody, more irritable, more regardless of the feelings of others. I suffered myself to use intemperate language to my wife. At length, I even offered her personal violence. My pets, of course, were made to feel the change in my disposition. I not only neglected, but ill-used them. For Pluto, however, I still retained sufficient regard to restrain me from maltreating him, as I made no scruple of maltreating the rabbits, the monkey, or even the dog, when by accident, or through affection, they came in my way. But my disease grew upon me -- for what disease is like Alcohol ! -- and at length even Pluto, who was now becoming old, and consequently somewhat peevish -- even Pluto began to experience the effects of my ill temper.</p>
+  <p class="paragraf">One night, returning home, much intoxicated, from one of my haunts about town, I fancied that the cat avoided my presence. I seized him; when, in his fright at my violence, he inflicted a slight wound upon my hand with his teeth. The fury of a demon instantly possessed me. I knew myself no longer. My  original soul seemed, at once, to take its flight from my body; and a more than fiendish malevolence, gin-nurtured, thrilled every fibre of my frame. I took from my waistcoat-pocket a pen-knife, opened it, grasped the poor beast by the throat, and deliberately cut one of its eyes from the socket ! I blush, I burn, I shudder, while I pen the damnable atrocity.</p>
+  <p class="paragraf">When reason returned with the morning -- when I had slept off the fumes of the night's debauch -- I experienced a sentiment half of horror, half of remorse, for the crime of which I had been guilty; but it was, at best, a feeble and equivocal feeling, and the soul remained untouched. I again plunged into excess, and soon drowned in wine all memory of the deed.</p>
+  <p class="paragraf">In the meantime the cat slowly recovered. The socket of the lost eye presented, it is true, a frightful appearance, but he no longer appeared to suffer any pain. He went about the house as usual, but, as might be expected, fled in extreme terror at my approach. I had so much of my old heart left, as to be at first grieved by this evident dislike on the part of a creature which had once so loved me. But this feeling soon gave place to irritation. And then came, as if to my final and irrevocable overthrow, the spirit of PERVERSENESS. Of this spirit philosophy takes no account. Yet I am not more sure that my soul lives, than I am that perverseness is one of the primitive impulses of the human heart -- one of the indivisible primary faculties, or sentiments, which give direction to the character of Man. Who has not, a hundred times, found himself committing a vile or a silly action, for no other reason than because he knows he should not? Have we not a perpetual inclination, in the teeth of our best judgment, to violate that which is Law, merely because we understand it to be such? This spirit of perverseness, I say, came to my final overthrow. It was this unfathomable longing of the soul to vex itself -- to offer violence to its own nature -- to do wrong for the wrong's sake only -- that urged me to continue and finally to consummate the injury I had inflicted upon the unoffending brute. One morning, in cool blood, I slipped a noose about its neck and hung it to the limb of a tree; -- hung it with the tears streaming from my eyes, and with the bitterest remorse at my heart; -- hung it because I knew that it had loved me, and because I felt it had given me no reason of offence; -- hung it because I knew that in so doing I was committing a sin -- a deadly sin that would so jeopardize my immortal soul as to place it -- if such a thing were possible -- even beyond the reach of the infinite mercy of the Most Merciful and Most Terrible God.</p>
+
+  <button class="btn btn-warning mt-5" onclick="alert('thanks for reading! hope u have a great day! <3')">Press me!</button>
+</div>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  });
+
+  document.querySelectorAll('.paragraf').forEach(p => observer.observe(p));
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
